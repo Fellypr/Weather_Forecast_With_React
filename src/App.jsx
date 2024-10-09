@@ -27,5 +27,4 @@ function App() {
     </>
   )
 }
-//PAREI NA PARET DOS COMPONENTS NO MINUTO 26:42
 export default App
