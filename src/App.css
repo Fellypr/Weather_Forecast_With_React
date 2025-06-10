@@ -1,50 +1,45 @@
-*{
+* {
   padding: 0;
   margin: 0;
   color: black;
   font-family: "Roboto", sans-serif;
 }
-body{
-  background-color: aquamarine ;
-}
-h1{
-  color: rgb(55, 29, 171);
-  font-size: 43px;
+body {
+  background: #2a7b9b;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  );
 }
 
-.screenfirt{
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  translate: -50% -50%;
+.screenfirt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  gap: 20px;
+  width: 100;
+  & input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 500px;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  & input:focus {
+    outline: none;
+    border: 2px solid rgb(0, 68, 255);
+  }
 }
-input{
-  width: 60%;
-  height: 2em;
-  position: relative;
-  padding-left: 3px;
-  left: 70px;
-  top: 20px;
-  border: none;
-  border-radius: 20px 0px 0px 20px;/*o border radius o primeiro valor "20px" vem de cima o segundo "0px" direita o terceiro "esquerda e a quarta "20px" baixo*/
-  color: black;
-  outline: none;
-}
-button{
 
-  position: relative;
-  left: 70px;
-  border: none;
-  background-color: orangered;
-  top: 20px;
-  color: white;
-  border-radius:  0px 20px 20px 0px; 
-  width: 5em;
-  height: 30px;
-}
-button:hover{
-  cursor: pointer;
-  background-color: rgb(161, 68, 35);
-  width: 5.5em;
-  height: 30px;
+@media screen and (max-width: 600px) {
+  .screenfirt {
+    & input {
+      width: 300px;
+    }
+  }
 }

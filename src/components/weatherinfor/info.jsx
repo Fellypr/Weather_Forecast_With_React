@@ -9,17 +9,13 @@ function Weatherinfor ({weather}){
             <h2>{weather.name}</h2>
 
             <div className='info'>
-                <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`} width={80}/>
+                <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`} width={100}/>
                 <p>{Math.round(weather.main.temp)}ºC</p>
-            </div>
                 <p className='description'>{weather.weather[0].description}</p>
-            <div className='infoprofun'>
                 <p>Sensação termica:{Math.round(weather.main.feels_like)}ºC</p>
                 <p>Umidade:{weather.main.humidity}%</p>
                 <p>pressão:{weather.main.pressure}</p>
             </div>
-            
-
         </div>
     );
 };
