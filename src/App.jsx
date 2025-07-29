@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import Weatherinfor from "./components/weatherinfor/info";
+import {Container }from "./styles/style";
 
 import { FaLocationDot } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
@@ -30,15 +31,14 @@ function App() {
     <>
       <div className="screenfirt">
         <div className="search">
-          <FaLocationDot size={30} color="black"/>
+          <FaLocationDot size={30} color="black" />
           <input
             type="text"
             placeholder="Digite o nome da cidade"
             onChange={(e) => setSearchCity(e.target.value)}
           />
-          <button><CiSearch size={30} color="black"/></button>
         </div>
-        {weather && <Weatherinfor weather={weather} />}
+        <Container activo={weather}> {weather && <Weatherinfor weather={weather} />}</Container>
       </div>
     </>
   );

@@ -28,17 +28,31 @@
     gap: 1rem;
   }
 }
-.extraInfo{
+.extraInfo {
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  gap: 5rem;
+  gap: 2rem;
 }
-.humidity{
+.humidity {
   display: flex;
   align-items: center;
-  gap: 1px;
+  gap: 5px;
+  width: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 1px 0px 7px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 1px 0px 7px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 0px 7px 0px rgba(0,0,0,0.75);
 }
 @media screen and (max-width: 930px) {
   .info {
@@ -48,7 +62,7 @@
   .windowsMain {
     height: auto;
   }
-  .search{
+  .search {
     width: 100%;
   }
 }
